@@ -45,18 +45,7 @@ const Header = () => {
                 <div className="headerOption headerOptionActive">
                     <HomeIcon fontSize="large" />
                 </div>
-                <div className="headerOption">
-                    <FlagIcon fontSize="large" />
-                </div>
-                <div className="headerOption">
-                    <SubscriptionsOutlinedIcon fontSize="large" />
-                </div>
-                <div className="headerOption">
-                    <StorefrontOutlinedIcon fontSize="large" />
-                </div>
-                <div className="headerOption">
-                    <SupervisedUserCircleIcon fontSize="large" />
-                </div>
+        
             </div>
             
             <div className="headerRight">

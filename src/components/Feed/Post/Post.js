@@ -31,6 +31,7 @@ const Post = ({ profilePic, image, username, timestamp, message }) => {
                 <div className="postOption">
                     <ThumbUp />
                     <p>Like</p>
+                    
                 </div>
 
                 <div className="postOption">

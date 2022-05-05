@@ -52,7 +52,6 @@ const DropdownMenu = () => {
             <img src={props.image} alt="pic" className="icon-profile" />
             {props.children}
             <br/>
-            See your profile
             </a>
         );
     }
@@ -71,32 +70,7 @@ const DropdownMenu = () => {
                 {/* <DropdownItem>My Profile</DropdownItem> */}
                 <DropdownItemImage image={user.photoURL}>{user.displayName}</DropdownItemImage>
 
-                <hr className="hrTag" />
-                <DropdownItem
-                    leftIcon={<FeedbackIcon />}
-                >Give Feedback</DropdownItem>
-                <hr className="hrTag" />
-
-                <DropdownItem
-                    leftIcon={<CogIcon />}
-                    rightIcon={<ChevronIcon />}
-                    goToMenu="settings"
-                >Settings & Privacy</DropdownItem>
-
-                <DropdownItem
-                    leftIcon={<HelpIcon/>}
-                    rightIcon={<ChevronIcon />}
-                    goToMenu="help"
-                >Help & Support</DropdownItem>
-
-                <DropdownItem
-                    leftIcon={<Brightness2Icon />}
-                >Dark Mode</DropdownItem>
-
-                <DropdownItem
-                    leftIcon={<ArrowIcon />}
-                >Switch to Classic Facebook</DropdownItem>
-
+               
                 <DropdownItem
                     leftIcon={<ExitToAppIcon />}
                 >Log Out</DropdownItem>
@@ -109,44 +83,7 @@ const DropdownMenu = () => {
             </div>
         </CSSTransition>
   
-        <CSSTransition
-            in={activeMenu === 'settings'}
-            timeout={500}
-            classNames="menu-secondary"
-            unmountOnExit
-            onEnter={calcHeight}
-        >
-            <div className="menu">
-                <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-                    <h2>Settings & Privacy</h2>
-                </DropdownItem>
-                <DropdownItem leftIcon={<CogIcon />}>Settings</DropdownItem>
-                <DropdownItem leftIcon={<EnhancedEncryptionIcon />}>Privacy Checkup</DropdownItem>
-                <DropdownItem leftIcon={<LockIcon />}>Privacy Shortcuts</DropdownItem>
-                <DropdownItem leftIcon={<ViewListIcon />}>Activity Log</DropdownItem>
-                <DropdownItem leftIcon={<SubtitlesIcon />}>News Feed Preferences</DropdownItem>
-                <DropdownItem leftIcon={<LanguageIcon />}>Language</DropdownItem>
-            </div>
-        </CSSTransition>
-
-        <CSSTransition
-            in={activeMenu === 'help'}
-            timeout={500}
-            classNames="menu-secondary"
-            unmountOnExit
-            onEnter={calcHeight}
-        >
-            <div className="menu">
-                <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-                    <h2>Help & Support</h2>
-                </DropdownItem>
-                <DropdownItem leftIcon={<HelpIcon />}>Help Center</DropdownItem>
-                <DropdownItem leftIcon={<ChatBubbleIcon />}>Help Community</DropdownItem>
-                <DropdownItem leftIcon={<MailIcon />}>Support Inbox</DropdownItem>
-                <DropdownItem leftIcon={<ReportIcon />}>Report a Problem</DropdownItem>
-            </div>
-        </CSSTransition>
-  
+       
         {/* <CSSTransition
             in={activeMenu === 'animals'}
             timeout={500}
